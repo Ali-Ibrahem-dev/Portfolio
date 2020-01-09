@@ -1,0 +1,388 @@
+
+/*
+
+*/
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+
+.active
+{
+    font-weight:bold;
+}
+
+.navbar-brand
+{
+  font-family: 'Marck Script', cursive !important;
+    font-size:30px;
+}
+.navbar-custom a 
+{
+    color:white !important;
+    font-size:20px;
+    font-family: 'Assistant', sans-serif;
+}
+
+.banner
+{
+    width:100%;
+    height:100%;
+    background-image: url(../images/home/img-1.jpg);
+    animation-name:bannerSlider;
+    animation-duration:8s;
+    animation-direction:alternate;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+.banner-caption
+{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,.5);
+    top:0;
+    left:0;
+    
+}
+.head
+{
+   position: absolute;
+    top:200px;
+   margin-left:30px;
+}
+.head h1
+{
+    font-family:'Francois One';
+    color:#fff;
+    font-weight: bold;
+    font-size:70px;
+}
+.head h3
+{
+    font-family:'segoe ui light';
+    color:#fff;
+    font-weight: bold;
+}
+ @keyframes bannerSlider
+{
+    25% { background-image: url(../images/home/img-1.jpg)}
+    50%{ background-image: url(../images/home/img-2.jpg)}
+    75%{ background-image: url(../images/home/img-2.jpg)}
+      100%{ background-image: url(../images/home/img-1.jpg)}
+}
+/**********************About******************************/
+#about
+{
+    margin-top:80px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.social-icons
+{
+padding:10px;
+}
+.social-icons i
+{
+    padding:10px;
+    font-size:15px;
+     padding: 10px 10px;
+    border: 1px solid black;
+    border-radius:50%;
+    background-color:black;
+    color: white;
+    cursor: pointer;
+}
+.social-icons i:hover
+{
+      background-color:white;
+    color:black;
+}
+.btn-cont
+{
+    display: inline-block;
+    text-align: center;
+    padding:20px 40px 20px 40px;
+    height:40px;
+    width:180px;
+    border:3px solid black;
+    padding:3px;
+    background-color:black;
+    margin-left:14px;
+    margin-top:40px;
+}
+.main-btn
+{
+    text-decoration: none;
+    color:white;
+    font-family: 'Assistant', sans-serif;
+    font-size:20px;
+}
+.btn-cont:hover
+{
+    background-color:white;
+}
+.btn-cont:hover .main-btn
+{
+    color: black;
+    text-decoration:none;
+}
+.my-info span
+{
+    font-family: 'segoe ui light', sans-serif;
+    font-size:30px;
+}
+ .my-info p
+{
+     font-family: 'segoe ui light', sans-serif;
+    font-size:21px;
+}
+/**********************Services******************************/
+#services
+{
+    margin-top:40px;
+}
+.heading
+{
+    margin:auto;
+      font-family: 'segoe ui light', sans-serif;
+    font-size:bold;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+.icon
+{
+    text-align: center;
+    margin:auto;
+  display: block; 
+       background-color:gainsboro;
+    border-radius:50%;
+    padding:30px;
+    width:92px;
+    height:92px;
+    transition:all 1s;
+}
+.icon i
+{
+font-size:32px;
+color:black;
+    text-align: center;
+}
+.icon:hover
+{
+    background-color:white;
+    transform:scale(1.2,1.2)
+}
+
+.service-item
+{
+    text-align:center;
+    margin:20px;
+}
+.service-item h4
+{
+    margin:10px;
+    font-family:'segoe ui light';
+    font-weight:bold;
+}
+.service-item p
+{
+    margin:10px;
+    font-family:'Assistant';
+}
+/**********************states******************************/
+
+#state
+{
+    margin-top:0px;
+    background-image: url(../images/stats-bg.jpg);
+    background-size:100% 100%;
+}
+
+.counting-sec{
+  padding: 40px 0;
+  width: 100%;
+
+}
+.inner-width{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+}
+.col{
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.col i{
+  font-size: 40px;
+  color: #000;
+}
+.num{
+  font-size: 40px;
+  margin: 20px 0;
+}
+/**********************Services******************************/
+.port-image
+{
+    width: 100%;
+}
+
+.col-md-4
+{
+    margin-bottom:20px;
+}
+
+.each-item
+{
+    position:relative;
+    overflow:hidden;
+}
+.caption
+{
+    position: absolute;
+    margin:auto;
+    background-color:rgba(256,256,256,.8);
+    height:70%;
+    width:70%;
+    top:15%;
+    left:15%;
+    transition:all .5s;
+    opacity:0;
+    cursor:pointer;
+}
+.each-item:hover .caption
+{
+    height:94%;
+    width:94%;
+    top:3%;
+    left:3%;
+    opacity:1;
+}
+
+.caption h6
+{
+    margin-top:80px;
+     font-family:sans-serif;
+    font-weight:bold;
+}
+.cap-icon
+{
+   text-align: center;
+    margin:auto;
+    background-color:white;
+  display: block; 
+    border-radius:20%;
+    padding:10px;
+    width:38px;
+    height:38px;
+    transition:all 1s; 
+    margin-top:20px;
+    
+}
+.cap-icon i
+{
+    font-size:18px;
+color:black;
+    text-align: center;
+}
+#portfolio
+{
+    margin-top:100px;
+}
+.portfolio-headings
+{
+     margin-bottom:50px;
+    font-family:'Francois One';
+    font-weight:bold;
+}
+#portfolio ul li
+{
+    list-style-type: none;
+    margin-left:15px;
+    cursor:pointer;
+    display:inline-block;
+    position:relative;
+}
+#portfolio ul li::before {
+    content: "/";
+    position: absolute;
+    right: -15px;
+    font-weight: 400;
+}
+#portfolio ul li:last-child:before {
+    visibility: hidden;
+}
+
+/**********************blog******************************/
+#blog
+{
+    margin-top:50px;
+    padding:30px 0;
+    background-color: gainsboro;
+}
+.blog-headings
+{
+      margin:30px 0px;
+    font-family:'Francois One';
+    font-weight:bold; 
+}
+.blog-item
+{
+    background-color: white;
+}
+.blog-img
+{
+    overflow: hidden;
+}
+.blog-img img
+{
+    transition:all 1s;
+}
+.blog-img:hover img
+{
+    transform:scale(1.2,1.2);
+    cursor: pointer;
+}
+.blog-content
+{
+    padding:10px;
+   font-family:'segoe ui light';
+}
+
+/**********************testmonial******************************/
+.contact-headings
+{
+      margin:30px 0px;
+    font-family:'Francois One';
+    font-weight:bold; 
+}
+.form-control
+{
+    border:none;
+    border-bottom:1px solid black;
+}
+/**********************testmonial******************************/
+#footer
+{
+    background-color:#222222;
+    padding:40px 0px;
+    margin-top:50px;
+}
+
+.undeline
+{
+   
+    height:1px;
+    width:100%;
+    background-color:black;
+}
+.copy-right
+{
+    margin-top:20px;
+    font-family:'segoe ui light';
+}
