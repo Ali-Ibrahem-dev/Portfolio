@@ -178,7 +178,7 @@ text-align: center;
 }
  @keyframes bannerSlider
 {
-    50% { background-image: url(../images/home/img-1.jpg)}
+    0% { background-image: url(../images/home/img-1.jpg)}
     100%{ background-image: url(../images/home/img-2.jpg)}
    
 }
