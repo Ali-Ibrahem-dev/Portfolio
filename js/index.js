@@ -1,3 +1,4 @@
+/***************type************/
 var typed1 = new Typed("#typed1", {
   strings: ["Creating WebSites","Designing UI/UX"],
   smartBackspace:true // Default value
@@ -7,14 +8,7 @@ var typed1 = new Typed("#typed1", {
     
 });
 
-
-
-
-
-
-
-
-
+  /*************** removeactive************/
 function removeActive()
 {
       for(var i=0;i<6;i++)
@@ -22,31 +16,46 @@ function removeActive()
                 $(".nav-ul a").eq(i).removeClass('active');
             }
 }
+
 $(document).ready(function() {
-    var aTop = $('#home').height();
-    if($(this).scrollTop()>=aTop){
+    
+    /*************** preloader************/
+     $("#loading .spinner").fadeOut(2000 , function(){
+    
+    $("#loading").fadeOut(2000)
+})
+     /*************** navbarchange************/
+                 
+    if($(this).scrollTop()>=400){
      $("nav").removeClass('bg-transparent');
           $("nav").addClass('bg-white');
     $("nav").removeClass('navbar-custom');
+        
     }
          else{
                $("nav").addClass('bg-transparent');
              $("nav").addClass('navbar-custom');
           $("nav").removeClass('bg-white');
-          
          }
-    
+      /***************scrollspy************/
   $('body').scrollspy({target: ".navbar", offset: 50});  
-  $("a").click(function(){
+  $(".nav-ul a").click(function(){
     removeActive();
     $(this).addClass('active');
+      $(".navbar-toggler").addClass("collapsed");
+   $("#navbarSupportedContent").removeClass("collapse show");
+   $("#navbarSupportedContent").addClass("collapse");
 $("body").animate({scrollTop:$( $(this).attr("href")  ).offset().top  },1000)
 })
-////////////////////////////////////
+
  
      $(window).scroll(function(){
-    var aTop = $('#home').height()-30;
-    if($(this).scrollTop()>=aTop){
+       if($(this).scrollTop()>=100 && $(this).scrollTop()<400 ){
+           $("nav").hide();
+       }
+         else {$("nav").show();}
+    var aTop = $('#home').height();
+    if($(this).scrollTop()>=400){
      $("nav").removeClass('bg-transparent');
           $("nav").addClass('bg-white');
     $("nav").removeClass('navbar-custom');
@@ -57,16 +66,12 @@ $("body").animate({scrollTop:$( $(this).attr("href")  ).offset().top  },1000)
           $("nav").removeClass('bg-white');
           
          }
-      
-         
-         
+            
          
   });
     
-    
-   $('.carousel').carousel({
-  interval: 2000
-})
+    /*************** owl carousel************/
+   
      $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
@@ -86,6 +91,7 @@ $("body").animate({scrollTop:$( $(this).attr("href")  ).offset().top  },1000)
    var owl = $('.owl-carousel');
     owl.trigger('play.owl.autoplay',[2000]);   
     
+    /*************** filterDivs************/
     $(".filter-button").click(function(){
         for(var i=0;i<4;i++)
             {
@@ -97,14 +103,12 @@ $("body").animate({scrollTop:$( $(this).attr("href")  ).offset().top  },1000)
         
         if(value == "all")
         {
-            //$('.filter').removeClass('hidden');
+          
             $('.filter').show('1000');
         }
         else
         {
          
-//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
             $(".filter").not('.'+value).hide('3000');
             $('.filter').filter('.'+value).show('3000');
        
@@ -112,5 +116,7 @@ $("body").animate({scrollTop:$( $(this).attr("href")  ).offset().top  },1000)
     });
 
 });
+
+/*************** counter************/
 $(".num").counterUp({delay:10,time:1000});
  
