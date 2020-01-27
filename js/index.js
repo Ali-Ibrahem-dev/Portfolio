@@ -20,9 +20,9 @@ function removeActive()
 $(document).ready(function() {
     
     /*************** preloader************/
-     $("#loading .spinner").fadeOut(2000 , function(){
+     $("#loading .spinner").fadeOut(3000 , function(){
     
-    $("#loading").fadeOut(2000)
+    $("#loading").fadeOut(3000)
 })
      /*************** navbarchange************/
                  
