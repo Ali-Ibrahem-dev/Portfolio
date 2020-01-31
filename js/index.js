@@ -81,7 +81,7 @@ $("body").animate({scrollTop:$( $(this).attr("href")  ).offset().top  },1000)
             items:1
         },
         700:{
-            items:2
+            items:1
         },
         1000:{
             items:3
