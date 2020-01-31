@@ -77,7 +77,7 @@ $("body").animate({scrollTop:$( $(this).attr("href")  ).offset().top  },1000)
     margin:10,
     nav:true,
     responsive:{
-        0:{
+        450:{
             items:1
         },
         700:{
